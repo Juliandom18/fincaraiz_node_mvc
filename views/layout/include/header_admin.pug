@@ -1,0 +1,13 @@
+header.bg-blue-700.py-2.shadow-2xl
+    .container.mx-auto.flex.justify-between.items-center
+        h1.text-4xl.text-white.font-extrabold.text-center Finca 
+            span.font-normal Raiz
+
+        nav(class="my-5 text-sm md:flex md:items-center md:gap-3 font-bold text-white hidden")
+            a(class="transition-all hover:scale-105 hover:text-xl" href="") Mis Propiedades
+            hr(class="w-0.5 h-10 bg-white")
+            a(class="transition-all hover:scale-105 hover:text-xl" href="") Mi Perfil
+
+            form(action="/auth/cerrarSesion" method="POST")
+                input(type="hidden" name="_csrf" value=csrfToken)
+                input(type="submit" class="bg-indigo-800 py-2 px-10 rounded-lg font-bold cursor-pointer" value="Cerrar Sesión")

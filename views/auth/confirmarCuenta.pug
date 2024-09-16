@@ -1,0 +1,13 @@
+extends ../layout/index
+
+block  contenido
+    .py-10
+        h1.text-4xl.my-10.font-extrabold.text-center Bien
+            span.font-normal Raiz
+        h3.text-center.text-3xl.font-extrabold= pagina
+
+    div(class= error ? 'shadow-red-500 py-4' : 'shadow-lime-500 py-4').bg-white.py-8.px-4.max-w-md.mx-auto.shadow-2xl.rounded-xl
+        p(class= error ? 'bg-red-500' : 'bg-lime-500').py-2.px-5.rounded-lg.w-full.font-bold.text-center.text-white.uppercase= mensaje
+
+        if !error
+            a(href="/auth/login" class="text-center font-bold text-sm text-lime-500 uppercase mt-5 block") Ya se Puede Iniciar Sesión 😎
